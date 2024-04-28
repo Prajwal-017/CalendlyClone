@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Management</title>
+    <!-- Internal CSS Styles -->
+    <style>
+        /* Importing Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Orbitron:wght@700&display=swap');
+
+        /* CSS Styles for Appointment Management System */
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #000000; /* Black background */
+            color: #f0f0f0; /* Light text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #1f1f1f; /* Dark container background */
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Bangers', cursive; /* Bold, funky font for headings */
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 36px; /* Large font size */
+            font-weight: 700;
+            color: #ff0055; /* Vibrant pink color */
+            text-transform: uppercase;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        form {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ff0055; /* Vibrant pink for labels */
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        button {
+            width: 90%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            font-size: 16px;
+            background-color: #2f2f2f; /* Darker background for form elements */
+            color: #f0f0f0; /* Light text */
+            transition: all 0.3s;
+        }
+
+        input:focus,
+        select:focus {
+            background-color: #ff0055; /* Vibrant pink color on focus */
+            color: #f0f0f0; /* Light text on focus */
+            outline: none;
+        }
+
+        button {
+            background-color: #ff0055; /* Vibrant pink button color */
+            color: #f0f0f0; /* Light text */
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #cc0048; /* Darker pink on hover */
+            transform: scale(1.1); /* Slight scaling on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Form container to center the form in a box -->
+    <div class="form-container">
+        <h1>Appointment Management</h1>
+
+        <!-- Form to create a new appointment -->
+        <form id="createAppointmentForm" action="/appointment" method="post">
+            <label for="dateTime">Appointment Date and Time:</label>
+            <input type="datetime-local" id="dateTime" name="dateTime" required><br>
+
+            <label for="user">User:</label>
+            <input type="text" id="user" name="user" required><br>
+
+            <label for="location">Location:</label>
+            <select id="location" name="location" required>
+                <option value="Zoom">Zoom</option>
+                <option value="Google Meet">Google Meet</option>
+                <option value="In-person">In-person</option>
+            </select><br>
+
+            <button type="submit">Create Appointment</button>
+        </form>
+    </div>
+</body>
+</html>

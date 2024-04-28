@@ -1,0 +1,86 @@
+@charset "ISO-8859-1";
+/* CSS Styles for Appointment Management System */
+/* Importing Google Fonts */
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Orbitron:wght@700&display=swap');
+
+/* CSS Styles for Appointment Management System */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000000; /* Black background */
+    color: #f0f0f0; /* Light text */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #1f1f1f; /* Dark container background */
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Bangers', cursive; /* Bold, funky font for headings */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 36px; /* Large font size */
+    font-weight: 700;
+    color: #ff0055; /* Vibrant pink color */
+    text-transform: uppercase;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ff0055; /* Vibrant pink for labels */
+    font-weight: bold;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    font-size: 16px;
+    background-color: #2f2f2f; /* Darker background for form elements */
+    color: #f0f0f0; /* Light text */
+    transition: all 0.3s;
+}
+
+input:focus,
+select:focus {
+    background-color: #ff0055; /* Vibrant pink color on focus */
+    color: #f0f0f0; /* Light text on focus */
+    outline: none;
+}
+
+button {
+    background-color: #ff0055; /* Vibrant pink button color */
+    color: #f0f0f0; /* Light text */
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #cc0048; /* Darker pink on hover */
+    transform: scale(1.1); /* Slight scaling on hover */
+}
